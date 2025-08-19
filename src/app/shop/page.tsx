@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Heart, ShoppingCart, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -220,6 +221,8 @@ const initialProducts: Product[] = [
 const FAVORITES_KEY = "shop:favorites";
 
 export default function ShopPage() {
+  const router = useRouter();
+
   // Products state (so we can toggle wishlists)
   const [products, setProducts] = useState<Product[]>(initialProducts);
 
@@ -667,9 +670,7 @@ export default function ShopPage() {
                     {paginatedProducts.map((product) => (
                       <div
                         key={product.id}
-                        onClick={() =>
-                          (window.location.href = `/products/${product.id}`)
-                        }
+                        onClick={() => router.push(`/products/${product.id}`)}
                         className={`bg-white rounded-2xl border border-purple-300 hover:ring-2 hover:ring-purple-200 transition-all duration-300 group cursor-pointer ${
                           viewMode === "list"
                             ? "flex gap-6 p-4 sm:p-6"

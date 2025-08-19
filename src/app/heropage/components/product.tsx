@@ -2,9 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Star, Heart, ArrowRight } from "lucide-react";
 
 function Product() {
+  const router = useRouter();
   const products = [
     {
       id: 1,
@@ -118,7 +120,7 @@ function Product() {
           {allProducts.map((product, index) => (
             <div
               key={`${product.id}-${index}`}
-              onClick={() => window.location.assign(`/products/${product.id}`)}
+              onClick={() => router.push(`/products/${product.id}`)}
               className="bg-white rounded-3xl border border-purple-300 hover:shadow-lg transition-all duration-300 transform hover:scale-105 group cursor-pointer overflow-hidden "
             >
               {/* Product Image Container */}
@@ -177,9 +179,10 @@ function Product() {
                     {product.price}
                   </span>
                   <button
-                    onClick={() =>
-                      window.location.assign(`/products/${product.id}`)
-                    }
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      router.push(`/products/${product.id}`);
+                    }}
                     className="bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
                   >
                     <span className="text-lg">+</span>
