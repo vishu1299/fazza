@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { Eye, EyeOff, Mail, User, Phone, LogIn } from "lucide-react";
+import { Eye, EyeOff, Mail, Phone, LogIn } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -148,7 +148,7 @@ export default function Login() {
                 Remember me
               </label>
               <Link
-                href="#"
+                href="/forgot-password"
                 className="text-xs text-[var(--primary)] hover:underline"
               >
                 Forgot password?
@@ -173,11 +173,8 @@ export default function Login() {
           </div>
 
           {/* Social / Alternate sign-ins */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <button className="flex-1 h-10 rounded-full border border-gray-300 hover:bg-gray-50 text-[var(--secondary)] font-medium flex items-center justify-center gap-2">
-              <User className="w-4 h-4" /> Enter as a Guest
-            </button>
-            <button className="flex-1 h-10 rounded-full border border-gray-300 hover:bg-gray-50 text-[var(--secondary)] font-medium flex items-center justify-center gap-2">
+          <div className="space-y-3">
+            <button className="w-full h-10 rounded-full border border-gray-300 hover:bg-gray-50 text-[var(--secondary)] font-medium flex items-center justify-center gap-2">
               {/* Google logo */}
               <svg className="w-4 h-4" viewBox="0 0 48 48">
                 <path

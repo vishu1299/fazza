@@ -65,7 +65,7 @@ function Herosearch() {
 
           {/* Right Side Icons */}
           <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
-            <Link href="/wishlist">
+            <Link href="/account">
               {/* Wishlist Icon with Badge */}
               <button className="relative p-1 sm:p-1.5 md:p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 cursor-pointer">
                 <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gray-600" />
@@ -112,12 +112,7 @@ function Herosearch() {
                 >
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setSelectedLanguage("Spanish")}
-                  className="text-gray-700 hover:bg-[var(--primary)]/10 hover:text-[var(--primary)] cursor-pointer transition-colors duration-200 focus:outline-none focus:bg-[var(--primary)]/10 focus:text-[var(--primary)] text-xs sm:text-sm"
-                >
-                  Spanish
-                </DropdownMenuItem>
+
                 <DropdownMenuItem
                   onClick={() => setSelectedLanguage("French")}
                   className="text-gray-700 hover:bg-[var(--primary)]/10 hover:text-[var(--primary)] cursor-pointer transition-colors duration-200 focus:outline-none focus:bg-[var(--primary)]/10 focus:text-[var(--primary)] text-xs sm:text-sm"
