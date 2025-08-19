@@ -44,7 +44,7 @@ export default function Mission() {
           <div className="relative w-full order-first lg:order-last">
             <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[450px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/assets/images/about/Illustration.png"
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Professional man with tablet looking at digital interface representing our mission and vision"
                 fill
                 className="object-cover"
