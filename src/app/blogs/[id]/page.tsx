@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -24,7 +24,7 @@ interface RecentPost {
   image: string;
 }
 
-function BlogDetails() {
+function BlogDetailsContent() {
   const params = useParams();
   const blogId = parseInt(params.id as string);
 
@@ -221,4 +221,19 @@ Let's explore the relationship between mainframes and banking risks. Then we'll 
   );
 }
 
-export default BlogDetails;
+export default function BlogDetailsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading blog post...</p>
+          </div>
+        </div>
+      }
+    >
+      <BlogDetailsContent />
+    </Suspense>
+  );
+}

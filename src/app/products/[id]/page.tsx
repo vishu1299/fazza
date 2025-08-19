@@ -215,7 +215,7 @@ function ProductVideoControls() {
 }
 */
 
-import React, { useMemo, useState, useRef } from "react";
+import React, { useMemo, useState, useRef, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
@@ -393,7 +393,7 @@ const DEMO_PRODUCTS = [
   },
 ];
 
-export default function ProductDetailsPage() {
+function ProductDetailsContent() {
   const { id } = useParams();
   const router = useRouter();
   const productId = Number(id);
@@ -684,5 +684,22 @@ function TabsSection({
         </div>
       )}
     </div>
+  );
+}
+
+export default function ProductDetailsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading product details...</p>
+          </div>
+        </div>
+      }
+    >
+      <ProductDetailsContent />
+    </Suspense>
   );
 }
