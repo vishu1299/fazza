@@ -99,7 +99,7 @@ export default function ContactPage() {
                   placeholder="Name"
                   aria-invalid={!!errors.name || undefined}
                   className={cn(
-                    "h-11 rounded-full border-gray-200 bg-white text-gray-900 placeholder:text-gray-400",
+                    "h-11 rounded-full border-purple-300 bg-white text-gray-900 placeholder:text-gray-400",
                     "focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#5e3b91]"
                   )}
                   {...register("name", { required: "Name is required" })}
@@ -120,7 +120,7 @@ export default function ContactPage() {
                   placeholder="Email"
                   aria-invalid={!!errors.email || undefined}
                   className={cn(
-                    "h-11 rounded-full border-gray-200 bg-white text-gray-900 placeholder:text-gray-400",
+                    "h-11 rounded-full border-purple-300 bg-white text-gray-900 placeholder:text-gray-400",
                     "focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#5e3b91]"
                   )}
                   {...register("email", {
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   placeholder="Address"
                   aria-invalid={!!errors.address || undefined}
                   className={cn(
-                    "h-11 rounded-full border-gray-200 bg-white text-gray-900 placeholder:text-gray-400",
+                    "h-11 rounded-full border-purple-300 bg-white text-gray-900 placeholder:text-gray-400",
                     "focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#5e3b91]"
                   )}
                   {...register("address", { required: "Address is required" })}
@@ -166,7 +166,7 @@ export default function ContactPage() {
                   placeholder="Phone Number"
                   aria-invalid={!!errors.phone || undefined}
                   className={cn(
-                    "h-11 rounded-full border-gray-200 bg-white text-gray-900 placeholder:text-gray-400",
+                    "h-11 rounded-full border-purple-300 bg-white text-gray-900 placeholder:text-gray-400",
                     "focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#5e3b91]"
                   )}
                   {...register("phone", {
@@ -194,7 +194,7 @@ export default function ContactPage() {
                 placeholder="Message"
                 aria-invalid={!!errors.message || undefined}
                 className={cn(
-                  "min-h-[120px] rounded-2xl border-gray-200 bg-white text-gray-900 placeholder:text-gray-400",
+                  "min-h-[120px] rounded-2xl border-purple-300 bg-white text-gray-900 placeholder:text-gray-400",
                   "focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#5e3b91]"
                 )}
                 {...register("message", {

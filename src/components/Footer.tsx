@@ -12,13 +12,17 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             {/* Brand Logo */}
             <div className="flex-shrink-0">
-              <Image
-                src="/assets/images/Logo.png"
-                alt="Logo"
-                width={190}
-                height={190}
-                className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto"
-              />
+              <div className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto">
+                <Image
+                  src="/assets/images/Logo.png"
+                  alt="Mandean Logo"
+                  width={190}
+                  height={190}
+                  className="h-full w-auto object-contain"
+                  priority={false}
+                  unoptimized={true}
+                />
+              </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6 font-roboto font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur

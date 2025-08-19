@@ -93,7 +93,7 @@ function Homesale() {
             return (
               <div
                 key={product.id}
-                className="group cursor-pointer rounded-xl sm:rounded-2xl   hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                className="group cursor-pointer rounded-xl sm:rounded-2xl   hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-purple-300"
                 style={{ backgroundColor: product.bgColor }}
               >
                 {/* Image area - full width cover */}

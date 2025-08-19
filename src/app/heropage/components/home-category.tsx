@@ -53,9 +53,9 @@ function Homecategory() {
         {/* Categories Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
           {categories.map((category) => (
-            <div key={category.id} className="group cursor-pointer">
+            <div key={category.id} className="group cursor-pointer ">
               {/* Category Card */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 ">
+              <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 border border-purple-300">
                 {/* Image Container */}
                 <div className="relative w-full aspect-square mb-3 sm:mb-4 lg:mb-6 flex items-center justify-center">
                   <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">

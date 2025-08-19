@@ -72,7 +72,7 @@ function Bestseller() {
               {smallCards.map((card) => (
                 <div
                   key={card.id}
-                  className={`${card.bgColor} rounded-2xl p-4 sm:p-6 border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105 group cursor-pointer`}
+                  className={`${card.bgColor} rounded-2xl p-4 sm:p-6 border border-purple-300 hover:shadow-lg transition-all duration-300 transform hover:scale-105 group cursor-pointer `}
                 >
                   <div className="flex items-center gap-3 sm:gap-4">
                     {/* Card Image */}
@@ -115,7 +115,7 @@ function Bestseller() {
           {/* Right Side - Large Card */}
           <div className="lg:w-96 xl:w-[420px]">
             <div
-              className={`${largeCard.bgColor} rounded-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105 group cursor-pointer h-full relative`}
+              className={`${largeCard.bgColor} rounded-2xl p-6 sm:p-8 border border-purple-300 hover:shadow-lg transition-all duration-300 transform hover:scale-105 group cursor-pointer h-full relative`}
             >
               {/* Badge - Top Right */}
               <div className="absolute top-4 right-6">
